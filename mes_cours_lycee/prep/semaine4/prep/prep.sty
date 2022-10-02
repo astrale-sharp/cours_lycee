@@ -1,0 +1,91 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Cleese Assignment
+% Structure Specification File
+% Version 1.0 (27/5/2018)
+%
+% This template originates from:
+% http://www.LaTeXTemplates.com
+%
+% Author:
+% Vel (vel@LaTeXTemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\usepackage{lastpage} % Required to determine the last page number for the footer
+
+
+\usepackage{graphicx} % Required to insert images
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs
+
+\usepackage[svgnames]{xcolor} % Enabling colors by their 'svgnames'
+\usepackage[most]{tcolorbox} % Required for boxes that split across pages
+
+\usepackage{booktabs} % Required for better horizontal rules in tables
+
+\usepackage{listings} % Required for insertion of code
+
+\usepackage{etoolbox} % Required for if statements
+
+\usepackage{multido} % required for dotted lines
+
+% \usepackage{arydshln} % Required for dotted lines
+% \setlength{\dashlinedash}{0.2pt}
+% \setlength{\dashlinegap}{4.5pt}
+% \setlength{\arrayrulewidth}{0.2pt}
+
+
+\usepackage[french]{babel} % English language hyphenation
+
+%----------------------------------------------------------------------------------------
+%	MARGINS
+%----------------------------------------------------------------------------------------
+
+\usepackage{geometry} % Required for adjusting page dimensions and margins
+
+\geometry{
+	paper=a4paper, % Change to letterpaper for US letter
+	top=2.5cm, % Top margin
+	bottom=2cm, % Bottom margin
+	left= 1.5cm, % Left margin
+	right=1.5cm, % Right margin
+	headheight=14pt, % Header height
+	footskip=1.4cm, % Space from the bottom margin to the baseline of the footer
+	headsep=1.2cm, % Space from the top margin to the baseline of the header
+	%showframe, % Uncomment to show how the type block is set on the page
+}
+
+
+
+%----------------------------------------------------------------------------------------
+%	FONT
+%----------------------------------------------------------------------------------------
+\usepackage{fontspec}
+\usepackage{unicode-math}
+\usepackage[utf8]{inputenc} % Required for inputting international characters
+\usepackage[T1]{fontenc} % Output font encoding for international characters
+
+% \usepackage[sfdefault,light]{roboto} % Use the Roboto font
+\setmainfont[Ligatures=TeX]{Caladea}
+%----------------------------------------------------------------------------------------
+%	HEADERS AND FOOTERS
+%----------------------------------------------------------------------------------------
+
+\usepackage{fancyhdr} % Required for customising headers and footers
+
+\pagestyle{plain} % Enable custom headers and footers
+\lhead{}
+\chead{} % Centre header
+\rhead{}
+
+\lfoot{} % Left footer
+\cfoot{} % Centre footer
+\rfoot{} % Right footer
+

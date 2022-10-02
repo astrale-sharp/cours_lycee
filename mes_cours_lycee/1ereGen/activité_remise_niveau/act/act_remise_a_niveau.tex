@@ -1,0 +1,318 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Cleese Assignment (For Students)
+% LaTeX Template
+% Version 2.0 (27/5/2018)
+%
+% This template originates from:
+% http://www.LaTeXTemplates.com
+%
+% Author:
+% Vel (vel@LaTeXTemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[10pt]{article}
+\input{activite.sty} % Include the file specifying the document structure and custom commands
+% \usepackage{activite}
+%----------------------------------------------------------------------------------------
+%	ASSIGNMENT INFORMATION
+%----------------------------------------------------------------------------------------
+
+% Required
+\newcommand{\assignmentQuestionName}{Exercice} % The word to be used as a prefix to question numbers; example alternatives: Problem, Exercise
+\newcommand{\assignmentClass}{Physique Chimie -} % Course/class
+\newcommand{\assignmentTitle}{Remise à niveau} % Assignment title or name
+\newcommand{\assignmentAuthorName}{Mme Cercy} 
+% \newcommand{\assignmentAuthorName}{Chapitre Y} 
+
+%----------------------------------------------------------------------------------------
+%	VARIABLES
+%----------------------------------------------------------------------------------------
+
+\newcommand{\titreActivite}{Remise à niveau} % titre de l'activité
+\newcommand{\objectif}{ 	
+	
+	\begin{itemize}
+		\item Se réapproprier les bases de la physique chimie 
+		(Grandeur physique, écriture scientifique; Calcul littéral \& équations;
+		Conversions; Analyse dimensionnelle, mesure et précision)
+	\end{itemize}
+}
+
+
+\newcommand{\notascienc}{
+	\begin{question}
+		\questiontext{
+			\centering
+			\textbf{Exprimer} les valeurs suivantes en notation scientifique
+		}
+		\subquestion{$68$ km = \dotfill}
+		\subquestion{$7894 $ hg = \dotfill}
+		\subquestion{$0.000845$ kg = \dotfill}
+		\subquestion{$1.00015 $ m= \dotfill}
+		\subquestion{$35 × 10^7 $ g = \dotfill}
+		\subquestion{$0.0008 × 10^9$ s = \dotfill}
+	\end{question}
+}
+
+\newcommand{\convers}{
+	\begin{question}
+		\questiontext{
+			\textbf{Convertir} les valeurs suivantes.
+		}
+		\subquestion{15 mètre en kilomètre}
+		\subquestion{0.17 kilomètre en mètre}
+		\subquestion{8 mètre cube en cm cube}
+		\subquestion{10 Litre en décimètre cube}
+		\subquestion{0.5 décimètre cube en m cube}
+		\subquestion{30 Litre en mètre cube}
+		\subquestion{1 tonnes en kilo}
+		\subquestion{3 heures en secondes}
+		\subquestion{20 millions de nanomètres en mètres}
+	\end{question}
+}
+
+\newcommand{\chiffresign}{
+	\begin{question}
+		\questiontext{
+			\textbf{Exprimer} le résultat des opérations suivantes
+			avec le bon nombre de chiffres significatifs
+		}
+		\subquestion{$10.0 × 10^2 + 650$ = \dotfill}
+		\subquestion{$15.0 + 0.81$ = \dotfill}
+		\subquestion{$30.0 + 0.004$ = \dotfill}
+		\subquestion{$35.45 × 12.2$ = \dotfill}
+		\subquestion{$720/6$ = \dotfill}
+		\subquestion{$96.4 × 7$ = \dotfill}
+		\subquestion{$1000.0  + (1.27 × 2.000)$ = \dotfill}
+		\subquestion{$3.4 × 7 + 0.005$ = \dotfill}
+	\end{question}
+
+}
+
+\newcommand{\analydim}{
+	\begin{question}
+		\questiontext{
+			\textbf{Déterminer} la grandeur physique de la valeur à
+			gauche de chaque équation à l'aide de l'analyse dimensionnelle.
+		}
+
+		\textit{	Attention à bien faire les questions dans l'ordre}
+
+		\begin{minipage}[c]{0.45\textwidth}
+			\subquestion{\textit{Surface d'un rectangle = largeur × longueur}}
+		\end{minipage}
+		\hspace{10pt}
+		\begin{minipage}[c]{0.45\textwidth}
+			\subquestion{$vitesse = \displaystyle\frac{distance}{temps}$}
+		\end{minipage}
+
+		\begin{minipage}[c]{0.45\textwidth}
+			\subquestion{$acc\acute el\acute eration = \displaystyle\frac{vitesse}{temps} $}
+		\end{minipage}
+		\hspace{10pt}
+		\begin{minipage}[c]{0.45\textwidth}
+			\subquestion{$Force = Masse × acc\acute el\acute eration$}
+		\end{minipage}
+
+		\begin{minipage}[c]{0.45\textwidth}
+			\subquestion{$Pression = \displaystyle\frac{Force}{Surface}$}
+		\end{minipage}
+		\hspace{ 10pt}
+		\begin{minipage}[c]{0.45\textwidth}
+			\subquestion{$\acute Energie_{cin\acute etique} = \frac{1}{2} × masse × vitesse^2 $}
+		\end{minipage}
+
+		% \subquestion{$Puissance=\displaystyle\frac{\acute Energie}{temps}$}
+	\end{question}
+}
+
+\newcommand{\equat}{ 
+	\begin{question}
+		\questiontext{
+			\textbf{Donner l'expression littérale} de la valeur demandé dans les exemples suivants. 
+		}
+		\subquestion{Déterminer t dans $v=\displaystyle\frac{d}{t}$}
+		\subquestion{Déterminer d dans $v=\displaystyle\frac{d}{t}$}
+		\subquestion{Déterminer T dans $P × V = n × R × T$}
+		\subquestion{Déterminer a puis b puis c puis d dans 
+		$$\displaystyle\frac{a}{b} = \displaystyle\frac{c}{d}$$}
+
+	\end{question}
+}
+
+\newcommand{\pbun}{
+	\textbf{\textit{Problème 1}}
+
+
+On lance un caillou dans l'eau d'un lac.
+Le son du choc se propage dans l'eau,
+mais aussi dans l'air.
+
+\textbf{Déterminer} la durée mise par l'onde sonore
+pour atteindre la rive opposée située à
+d= 154 m dans chacun des deux milieux.
+
+Données : \begin{itemize}
+	\item Célérité du son dans l'air : vair​= 340 m⋅s-1 ;
+
+	\item Célérité du son dans l'eau : veau​= 1 500 m⋅s-1.
+\end{itemize}
+}
+
+\newcommand{\enigme}{ 
+	\textbf{\textit{Énigme}} --- Très difficile
+
+\begin{list}{$\bullet$}{}
+	\item 100 prisonniers sont enfermés dans une prison.
+	      Chaque prisonnier est seul dans sa cellule sans fenêtre et n’a
+	      aucun moyen de communiquer avec les autres ni de savoir ce qu’il
+	      se passe en dehors de la cellule.
+	\item Le directeur de la prison lance un jeu pour faire de la place afin
+	      de faire des travaux de rénovation. Si les prisonniers gagnent, ils
+	      seront libérés.
+	\item Le principe du jeu est le suivant. Chaque jour, un gardien fera venir
+	      l’un des prisonniers choisi aléatoirement dans une salle. Un même prisonnier
+	      peut venir plusieurs fois, même à la suite. C’est le hasard qui décide qui est
+	      désigné chaque jour. A l’intérieur, il n’y a qu’une ampoule et un interrupteur
+	      permettant de l’allumer et de l’éteindre. Le prisonnier est libre d’allumer,
+	      d’éteindre ou de ne rien faire. Il ne peut rien faire d’autre dans cette salle
+	      et ne peut pas toucher l’ampoule. Seuls les prisonniers peuvent appuyer sur
+	      l’interrupteur, le gardien n’a pas le droit d’y toucher. Au début du jeu,
+	      l’ampoule est éteinte et les prisonniers le savent.
+
+	\item Pour gagner le jeu, l’un des prisonniers doit pouvoir dire
+	      “tous les prisonniers (les 100) sont passés au moins une fois dans cette salle”
+	      et que ça soit vrai.
+
+	\item Juste avant de débuter ce jeu,
+	      les 100 prisonniers ont le droit exceptionnellement de discuter
+	      ensemble autant qu'ils veulent afin d’établir une stratégie.
+	      Ce sera la seule fois. Ils ne pourront plus communiquer après autrement
+	      qu’avec cette ampoule.
+\end{list}
+}
+
+\newcommand{\pbdeux}{ 
+	\textbf{\textit{Problème 2}} --- Difficile, travail à faire à plusieurs si autorisation
+
+	On a réalisé 10 mesures d'une température T, déterminer $σ$, déterminer $U(T)$
+
+	sachant que: $\sigma = \sqrt{\frac{1}{10}\sum_{i=1}^n T_i^2 - \overline{T}^2}$
+
+	où $\sum_{i=1}^10$ signifie la somme pour i variant de 1 à 10.
+
+	où $T_i$ est la i-ème mesure de T
+
+	où $\overline{T}$ est la moyenne des mesures de T
+
+	\vspace{5pt}
+	\begin{adjustbox}{max width=\columnwidth}
+		\begin{tabular}{@{}c|ccccccccccc@{}} \toprule
+			i                      & 1     & 2     & 3     & 4    & 5    & 6    & 7    & 8    & 9   & 10   \\
+			Mesures de $T_i$ en C° & 10.00 & 10.10 & 10.15 & 9.95 & 9.95 & 9.90 & 10.3 & 9.75 & 9.7 & 10.2 \\ \midrule
+		\end{tabular}
+	\end{adjustbox}
+}
+
+\newcommand{\pbtrois}{
+		\textbf{\textit{Problème 3}}
+	Calculer t à l'aide de la formule suivante :
+	$$a_c =  \displaystyle\frac{4\pi^2r}{t^2}\,\!$$
+	où $a_c = 10 m.s^{-1}$ est une accélération.
+
+	où $r=15mm$
+}
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+\date{}
+\title{\titreActivite}
+\maketitle % Print the title page
+
+%----------------------------------------------------------------------------------------
+%	QUESTION 1
+%----------------------------------------------------------------------------------------
+
+% \begin{minipage}[c]{0.75\textwidth}
+% \centering 
+
+% \begin{center}
+
+\underline{\textbf{Objectif}} :
+\vspace{2pt}
+\objectif
+
+\assignmentSection{Votre travail}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Pour les exercices suivants vous aurez besoin de:
+\begin{itemize}
+	\item \textbf{lire} les fiches méthodes distribués \textbf{au fur et à mesure} .
+	\item \textbf{Rédiger correctement vos réponses} (justification si nécessaire)
+	      sur votre cahier ou une feuille de votre porte vue.
+\end{itemize}
+
+
+
+\begin{minipage}[t]{0.45\textwidth}
+	% \centering
+	\notascienc
+\end{minipage}
+\hspace{30pt}
+\begin{minipage}[t]{0.45\textwidth}
+	% \centering
+	\convers
+\end{minipage}
+
+\begin{minipage}[t]{0.45\textwidth}
+	\chiffresign
+\end{minipage}
+\hspace{30pt}
+\begin{minipage}[t]{0.45\textwidth}
+	\equat
+\end{minipage}
+
+
+\analydim
+
+\clearpage
+
+\begin{center}
+	\textbf{	Il faut commencer à réfléchir aux problèmes par soi même,
+		puis quand on a une solution on peut se répartir le travail en groupe (si autorisation).}
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pbun
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{15pt}
+\pbdeux
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{15pt}
+\pbtrois
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{15pt}
+\enigme
+
+
+
+\end{document}

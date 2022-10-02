@@ -1,0 +1,239 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Cleese Assignment (For Students)
+% LaTeX Template
+% Version 2.0 (27/5/2018)
+%
+% This template originates from:
+% http://www.LaTeXTemplates.com
+%
+% Author:
+% Vel (vel@LaTeXTemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+
+
+\documentclass[10pt]{article}
+
+\input{fiche_methode.sty} % Include the file specifying the document structure and custom commands
+
+    
+
+%----------------------------------------------------------------------------------------
+%	VARIABLES
+%----------------------------------------------------------------------------------------
+
+\newcommand{\titre}{Méthodes (partie 2)} % titre de l'activité
+\newcommand{\introduction}{
+    % Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse semper massa ac sem egestas, eget venenatis leo dapibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed vestibulum quam ex, id auctor leo feugiat ut. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc nunc odio, tempor sit amet lorem non, consectetur dignissim justo. Donec ligula risus, finibus nec scelerisque ut, mattis mollis arcu. Donec eu neque nisl. Nulla facilisi.
+    }
+\newcommand{\minititle}[1]{
+    \vspace{-5pt}
+    \begin{center}
+        \textbf{{#1}}
+    \end{center}
+    \vspace{-5pt}    
+}
+
+\newcommand{\analysedim}{ 
+    \tcbsubtitle{Analyse dimensionnelle}
+    \minititle{Notion de dimension.}
+    La dimension d'une grandeur physique est son unité exprimée
+    par rapport aux sept unités de base du système international.
+    Elle se note avec des crochets [ ].
+
+    Exemple 1 : La vitesse moyenne peut être calculée grâce à la formule  $v_{moy}=\dfrac{d}{\Delta t}$
+
+    On en déduit la dimension $[v_{moy}]=\dfrac{L}{T}$ .
+    On dit que la vitesse est homogène à une longueur L divisée par un temps T.
+
+    Une grandeur peut être sans dimension (ou de dimension 1). Le radian (rad) en est un exemple.
+
+    Exemple 2 :
+
+    Déterminer la dimension d'une énergie puis celle d'une force.
+    \begin{list}{$\bullet$}{}
+        \item Par définition de l'énergie cinétique
+              $E_{\mathrm{c}}=\dfrac{1}{2}\cdot m\cdot v^2$ Donc $[E]=[m]\cdot \left[v^2\right]=M\cdot \dfrac{L^2}{T^2}$
+
+              Une énergie s'exprime en joule, unité équivalente à $kg⋅m^2⋅s^{-2}$
+        \item D'après la définition du travail d'une force : $W_{AB}(\vec{F})=F\cdot AB\cdot \cos (\alpha )$
+
+              Le travail $W_{AB}$ s'exprime en joule (J), $AB$ en mètre (m) et $cos(α)$ étant sans dimension,
+              on déduit qu'une force F s'exprime en
+              $J⋅m^{-1}$ ou en $(kg⋅m^2⋅s^{-2})⋅m^{-1}=kg⋅m⋅s^{-2}$
+    \end{list}
+
+    \minititle{L'équation aux dimensions.}
+    L'analyse dimensionnelle d'une relation permet de vérifier si une formule ou une
+    relation entre grandeurs physiques est homogène.
+    Dans le cas contraire la relation est fausse.
+
+    Exemple :
+
+    La période T d'oscillation d'un pendule de longueur l est donnée par la relation : $T_{\mathrm{ot}}\sqrt{\dfrac{I}{g}}p=2\Pi |cd$
+
+    Vérifier l'homogénéité de cette relation par une analyse dimensionnelle. g s'exprime en $N⋅kg^{-1}$, unité équivalente à $kg⋅m⋅s^{-2}⋅kg^{-1} = m⋅s^{-2}$ d'après l'exemple précédent.
+    D’où : $$\left[2\Pi \cdot \sqrt{\dfrac{l}{g}}\right]=\left[l^{\left(\frac{1}{2}\right)}\cdot g^{\left(-\frac{1}{2}\right)}\right]=L^{\left(\frac{1}{2}\right)}\cdot \left(L\cdot T^{-2}\right)^{\left(-\frac{1}{2}\right)}=T$$
+}
+
+
+\newcommand{\precisionincert}{
+    \tcbsubtitle{Précision et incertitudes}
+
+    \minititle{Erreur et incertitude}
+    \begin{list}{$\bullet$}{}
+        \item L'Incertitude sur X (notée U(X) ou $Δ(X)$, même unité que X)
+        \item L’incertitude indique la marge d’erreur possible estimée sur la mesure de X. On écrit alors : $X=X_{\exp }\pm \text{U}(X).$
+        \item Par convention, l’incertitude s’exprime avec un seul chiffre significatif arrondi au supérieur.
+        \item Exemple : si on mesure une longueur de 15,5 cm et que l’on estime que l’on est à ± 0,25 cm, alors $l_{\exp }=15.5cm$ et $\text{U}(l)=\pm 0.3cm$
+              La longueur mesurée sera alors exprimée sous la forme $l= 15,5 ± 0,3 cm$
+    \end{list}
+
+    \minititle{Incertitude sur une grandeur X mesurée}
+
+    \begin{itemize}
+        \item Si on a réalisé la moyenne de plusieurs mesures (incertitude de type A) : $\text{U}(X)=\mathrm{k}\dfrac{\sigma }{\sqrt{n}}$
+
+              où \begin{itemize}
+                  \item $n$ : le nombre de mesures
+                  \item $σ$ : l’écart-type de la série de mesures (représente l’étalement des mesures autour de la moyenne, peut être obtenu facilement avec un tableur)
+                  \item $k$ : un coefficient et qui dépend de n et du niveau de confiance sur la mesure (souvent 95 \%).
+              \end{itemize}
+
+              %	\setlength{\arrayrulewidth}{0.5mm}
+              %	\setlength{\tabcolsep}{18pt}
+              %	\renewcommand{\arraystretch}{1.5}
+              \vspace{5pt}
+              \begin{tabular}{@{}lllllllllllllll@{}}\toprule
+                  % \multicolumn{15}{c}{Item}                 \\ \cmidrule(r){1-2}
+                  %  &  &  &  &  &  &  &  &  &  &  &  &  &  & \\
+                  Nombre de mesures & 2     & 3   & 4    & 5    & 6    & 7    & 8    & 9    & 10   & 16   & 21   & 26   & 51   & 101   \\
+                  k (95 \%)         & 12,71 & 4,3 & 3,18 & 2,78 & 2,57 & 2,45 & 2,36 & 2,31 & 2,26 & 2,13 & 2,09 & 2,06 & 2,01 & 1,984 \\
+              \end{tabular}
+
+              \vspace{10pt}
+              Remarque : Plus n augmente, plus U(X) va diminuer. Faire un maximum de mesures permet d’améliorer la précision.
+
+              \vspace{10pt}
+        \item  Si on a réalisé une seule mesure (incertitude de type B)
+
+              \begin{minipage}[c]{0.65\textwidth}
+                  \begin{enumerate}
+                      \item Erreur liée à la taille de la graduation
+                            (ici deux traits sont séparés de 0,5 mL. On a donc ± 0,5 mL indiqué par les graduations).
+                      \item Erreur liée à la fabrication de l’objet de mesure (ici le fabricant assure la précision des graduations à ± 0,25 mL).
+                      \item Erreur liée à un facteur extérieur (ici la précision est donnée pour 20 °C. Si la température change, les données changent).
+                      \item Erreur liée à la lecture du résultat.
+                      \item Erreur liée aux manipulations (pertes de gouttes lors d’un versement ou bulles coincées dans le liquide).
+                  \end{enumerate}
+                  Toutes ces erreurs s’accumulent et il faut en tenir compte pour estimer raisonnablement l’incertitude.
+                  Ici on serait au minimum à ± 0,75 mL, voire ± 1 mL.
+              \end{minipage}
+              \hspace{10pt}
+              \begin{minipage}[c]{0.25\textwidth}
+                  \centering
+                  \includegraphics[width=\columnwidth]{incertitude.png}
+              \end{minipage}
+
+    \end{itemize}
+}
+
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+
+
+
+
+\begin{document}
+
+\cfoot{\vspace{-60pt} Méthodes partie 2 ; page 2 sur 2}
+\thispagestyle{plain}
+\pagestyle{fancy}
+\begin{titlebox}
+    % [height=0.35\textheight]
+    {\titre}
+    \analysedim
+
+    \precisionincert
+
+    \tcbsubtitle{Calcul littéral, résoudre une équation}
+
+    \minititle{Symbole d'une grandeur physique}
+
+    \begin{list}{$\bullet$}{}
+        \item Une grandeur physique caractérise un système.
+              Elle a comme caractéristique : une lettre la symbolisant,
+              une valeur numérique, une précision et une dimension.
+        \item Calcul littéral.
+              En seconde en physique, les symboles des grandeurs physiques sont
+              utilisés plutôt que leur valeur numérique, c'est ce qu'on appelle
+              le calcul littéral.
+
+        \item La première étape consiste donc à repérer les grandeurs physiques
+              de l'énoncé et à leur attribuer un symbole (une lettre) si l'énoncé
+              ne l'indique pas. Ce travail peut être fait au brouillon.
+
+              Annoncez la grandeur physique recherchée avec son symbole et son unité.
+
+        \item \textbf{\textit{Exemple:}}
+
+              On lance un caillou dans l'eau d'un lac.
+              Le son du choc se propage dans l'eau, mais aussi dans l'air.
+              Calculer la durée mise par l'onde sonore
+              pour atteindre la rive opposée située à $d = 154 m$ dans chacun des
+              deux milieux.
+
+              Données : \begin{itemize}
+                  \item Célérité du son dans l'air : $v_{air​} = 340   m⋅s^{-1}$
+                  \item Célérité du son dans l'eau : $v_{eau​} = 1 500 m⋅s^{-1}$
+              \end{itemize}
+    \end{list}
+
+    \minititle{À la recherche de l'expression littérale finale}
+
+    \begin{minipage}[c]{0.55\textwidth}
+        \begin{list}{$\bullet$}{}
+            \item Données de l'énoncé. En écrivant la relation du cours, faire attention à utiliser les données de l'énoncé et mettre des indices le plus souvent possible. Ne pas utiliser les notations du cours mais bien celles de l'exercice.
+
+            \item L'ELF c'est l'expression littérale finale. Il s'agit d'une relation où la grandeur recherchée est à gauche, seule. À droite du signe égal, on trouve une relation avec uniquement des grandeurs connues ou données dans l'énoncé.
+
+            \item Pour la trouver, on manipule les expressions mathématiques littérales suivant les règles vues en mathématiques.
+
+            \item Une fois l'ELF trouvée, on l'encadre afin d'aider le correcteur.
+        \end{list}
+    \end{minipage}
+    \hspace{40pt}
+    \begin{minipage}[c]{0.35\textwidth}
+        \begin{center}
+            \includegraphics[width=0.9\columnwidth]{calcullit1.png}
+        \end{center}
+    \end{minipage}
+
+    \minititle{Application numérique}
+
+    L'application numérique vient ensuite.
+    Il faut faire attention en spécifiant l'unité et en écrivant le résultat
+    avec le bon nombre de chiffres significatifs
+
+    \begin{center}
+        \includegraphics[width=0.4\columnwidth]{calcullit2.png}
+    \end{center}
+
+\end{titlebox}
+
+\end{document}
+
+
+
+

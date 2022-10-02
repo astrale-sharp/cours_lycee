@@ -1,0 +1,86 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Cleese Assignment (For Students)
+% LaTeX Template
+% Version 2.0 (27/5/2018)
+%
+% This template originates from:
+% http://www.LaTeXTemplates.com
+%
+% Author:
+% Vel (vel@LaTeXTemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[10pt]{article}
+\input{prep.sty} % Include the file specifying the document structure and custom commands
+% \usepackage{activite}
+
+\newcommand{\mypage}[1]{ 
+		\begin{minipage}[c]{0.45\textwidth}
+			\vspace{5pt}
+			{#1}
+			\vspace{5pt}
+		\end{minipage}
+}
+
+\newcommand{\seancea}{	\mypage{
+	\begin{list}{$\bullet$}{}
+		\item rappel Identifier les éléments dans les étoiles. — ok
+		\item act2
+		\item Ex1 à finir à la maison
+	\end{list}
+}}
+\newcommand{\seanceb}{	\mypage{ Correction ex1,2 + ex3456 + réviser CS, notation
+scientifique, conversion
+
+next time : éval chap1}}
+\newcommand{\seancec}{	\mypage{TP Qe ...}}
+\newcommand{\seanced}{	\mypage{TP Qe ...}}
+\newcommand{\seancee}{	\mypage{}}
+\newcommand{\seancef}{	\mypage{Correction Ex1 + act2 + ...}}
+\newcommand{\seanceg}{	\mypage{}}
+\newcommand{\seanceh}{	\mypage{}}
+\newcommand{\seancei}{	\mypage{}}
+% \newcommand{\seancej}{	\mypage{feuille zaccari + chap 1 act1}}
+
+
+
+\usepackage{longtable}
+
+
+
+\begin{document}
+\begin{center}
+	\textbf{CAHIER DE TEXTE}
+\end{center}
+
+%	\setlength{\arrayrulewidth}{0.5mm}
+\setlength{\tabcolsep}{13pt}
+\renewcommand{\arraystretch}{2.5}
+\begin{longtable}{@{}|c|c|c|c|c|@{}} \toprule
+	% Date        & Heure & Séance n° & Classe    & Contenu  \\\midrule
+	\midrule\multicolumn{5}{||c||}{SEMAINE 4}           \\\midrule
+	\multicolumn{5}{|l|}{ramasser feuille sti2d casier} \\\midrule
+	Jeu 22 Sept & 13h29 & 3 & 1GEN2 : A & \seancea      \\\midrule
+	Jeu 22 Sept & 14h24 & 3 & STI2D     & \seanceb      \\\midrule
+	Jeu 22 Sept & 15h23 & 3 & STI2D : A & \seancec      \\\midrule\midrule
+	Lun 26 Sept & 8h14  & 3 & STI2D : B & \seanced      \\\midrule
+	% Lun 26 Sept & 11h21 & 3 & 1GEN2 : B & \seancee \\\midrule
+	Lun 26 Sept & 12h16 & 3 & 1GEN1     & \seancef      \\\midrule
+	Lun 26 Sept & 15h23 & 3 & STI2D     & \seanceg      \\\midrule
+	% Lun 26 Sept & 16h32 & 3 & 1GEN1 : A & \seanceh \\\midrule
+	% &       &           &            &            \\
+
+
+	\bottomrule
+\end{longtable}
+
+\end{document}
+

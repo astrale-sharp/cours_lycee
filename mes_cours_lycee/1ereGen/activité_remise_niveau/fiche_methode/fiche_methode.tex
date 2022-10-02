@@ -1,0 +1,380 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Cleese Assignment (For Students)
+% LaTeX Template
+% Version 2.0 (27/5/2018)
+%
+% This template originates from:
+% http://www.LaTeXTemplates.com
+%
+% Author:
+% Vel (vel@LaTeXTemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+
+
+\documentclass[10pt]{article}
+
+\input{fiche_methode.sty} % Include the file specifying the document structure and custom commands
+
+    
+
+%----------------------------------------------------------------------------------------
+%	VARIABLES
+%----------------------------------------------------------------------------------------
+
+\newcommand{\titre}{Méthodes (partie 1)} % titre de l'activité
+\newcommand{\introduction}{
+    % Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse semper massa ac sem egestas, eget venenatis leo dapibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed vestibulum quam ex, id auctor leo feugiat ut. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc nunc odio, tempor sit amet lorem non, consectetur dignissim justo. Donec ligula risus, finibus nec scelerisque ut, mattis mollis arcu. Donec eu neque nisl. Nulla facilisi.
+    }
+\newcommand{\minititle}[1]{
+    \vspace{-5pt}
+    \begin{center}
+        \textbf{{#1}}
+    \end{center}
+    \vspace{-5pt}    
+}
+
+\newcommand{\ecriturescientifique}{    
+                \tcbsubtitle{La notation scientifique}
+
+            \vspace{10pt}
+            \begin{minipage}[t]{0.65\textwidth}
+                % \centering 
+                \minititle{Quel intérêt en Physique-Chimie ?}
+
+                Décrire la matière dans l'infiniment grand comme
+                dans l'infiniment petit fait appel à des valeurs numériques
+                de grandeurs très différentes, et l'écriture décimale d'un nombre
+                n'est alors pas adaptée. L'écriture scientifique permet d'exprimer
+                ces valeurs dans un format d'écriture plus facile à lire et à manipuler
+                dans les calculs.
+            \end{minipage}
+            \hspace{20pt}
+            \begin{minipage}[t]{0.3\textwidth}
+                % \centering 
+                \minititle{Quelle notation ?}
+
+                En écriture scientifique, une valeur numérique s'exprime sous la forme :
+                a $×10^n$ avec n, nombre entier relatif et a, nombre décimal tel que : $1< a <10$.
+    
+                % \vspace{5pt}
+            \end{minipage}
+
+            \vspace{7pt}
+            % \textit{Exemple} : 
+            \begin{list}{$\bullet$}{}
+                \item Taille d d'une molécule d'eau : $d=0.0000000034 m$ s'écrit plus simplement : $d=3.4 ×10^{-9} m$ .
+                \item Masse m de la Lune : $m=734800000000000000000 kg$ s'écrit plus simplement : $m=7.348 ×10^{20}kg$ .
+            \end{list}
+
+            \vspace{5pt}
+            \textit{Remarque} : Une calculatrice utilise nécessairement
+            cette notation pour les très grands ou très petits nombres
+            afin de pouvoir afficher ces nombres sur un écran de taille limitée.
+
+
+            \vspace{10pt}
+            \begin{minipage}[t]{0.45\textwidth}
+
+                % \vspace{5pt}
+                \minititle{Le point sur les puissances de 10}
+
+
+                \begin{itemize}
+                    \item[$\bullet$] $1=10^0$.
+                    \item[$\bullet$] Pour un nombre supérieur à 1, l'exposant est positif.
+
+                        \textit{Exemples :} \begin{itemize}
+                            \item $1000=10 × 10×10=10^{+3}$
+                            \item $800=8×100=8×10^{+2}$
+                        \end{itemize}
+                    \item[$\bullet$] Pour tout nombre entre zéro et 1, l'exposant est négatif.
+                    
+                        \textit{Exemples :}  \begin{itemize}
+                            \item $0.0001=\frac{1}{10000}=\frac{1}{10^4}=10^{-4}$
+                            \item $0.00175 = 1.75×10^{-3}$
+                        \end{itemize}
+
+                    \item[$\bullet$] $10^x × 10^y= 10^{x+y}$
+                    \item[$\bullet$] $\frac{10^x}{10^y} = 10^{x-y}$
+                \end{itemize}
+            \end{minipage}
+            \hspace{10pt}
+            \begin{minipage}[t]{0.5\textwidth}
+                \minititle{Quelques exemples de mise en écriture scientifique }
+                % \centering
+                % \begin{itemize}
+                     $$350kg = 3.5 × 10^2 kg$$
+                     $$350 × 10^{-4}kg = 3.5 × 10^2 × 10^{-4} = 3.5 × 10^ {2-4} = 3.5 × 10^{-2}kg $$
+                     $$0.000\: 87 =8.7× 10^{-4} m$$
+                     $$0.000\: 87× 10^{-3} =8.7× 10^{-4}× 10^{-3}=8.7× 10^{(-4-3)}=8.7× 10^{-7} m$$
+                % \end{itemize}
+
+            \end{minipage}
+}
+
+\newcommand{\multipletable}{
+    \centering
+    \setlength{\tabcolsep}{10pt}
+    \renewcommand{\arraystretch}{1}
+
+    \begin{tabular}{@{}cccl@{}}
+        \multicolumn{4}{c}{\textbf{Multiples}\vspace{5pt}}                    \\
+        Facteur multiplicatif & Préfixe & Symbole & Exemples                  \\ \midrule
+        $10^{3}  $            & kilo    & $k$     & $1 × km = 10^{3}  m$ \\
+        $10^{6}  $            & méga    & $M$     & $1 × Mm = 10^{6}  m$ \\
+        $10^{9}  $            & giga    & $G$     & $1 × Gm = 10^{9}  m$ \\
+        $10^{12} $            & téra    & $T$     & $1 × Tm = 10^{12} m$ \\
+    \end{tabular}
+    \vspace{10pt}
+
+    \begin{tabular}{@{}cccl@{}}
+        \multicolumn{4}{c}{\textbf{Sous-multiples} \vspace{5pt}}               \\
+        Facteur multiplicatif & Préfixe & Symbole & Exemples                   \\ \midrule
+        10-3                  & milli   & $m$     & $1 × mm = 10^{-3}  m$ \\
+        10-6                  & micro   & $μ$     & $1 × μm = 10^{-6}  m$ \\
+        10-9                  & nano    & $n$     & $1 × nm = 10^{-9}  m$ \\
+        10-12                 & pico    & $p$     & $1 × pm = 10^{-12} m$ \\
+    \end{tabular}
+}
+
+\newcommand{\conversion}{
+    \tcbsubtitle{les conversions}
+
+    \vspace{5pt} \hspace{-30pt}
+    \begin{minipage}[t]{0.65\textwidth}
+
+        \begin{center}
+            \minititle{\textit{Quelques préfixes du système international indispensables}}
+        \end{center}
+
+        \multipletable
+
+        \vspace{10pt}
+        \hspace{30pt}
+        \raggedright
+        \textbf{Unités de volume importantes:} $1 L = 1 dm^3 =10^2 cL$
+    \end{minipage}
+    \hspace{-30pt}
+    \begin{minipage}[t]{0.45\textwidth}
+        \minititle{La démarche à suivre}
+        \begin{enumerate}
+            \item Vérifier que la valeur à convertir
+                  est exprimée en écriture scientifique
+
+            \item si ce n'est pas le cas,
+                  il est fortement conseillé de l'écrire
+                  au préalable dans ce format d'écriture.
+            \item Pour convertir, il faut multiplier par la puissance
+                  de 10 appropriée.
+            \item a valeur de l'exposant de la puissance pour
+                  la conversion est égale à la différence entre
+                  l'exposant de l'unité de départ et
+                  l'exposant de l'unité d'arrivée.
+            \item si l'on passe d'une unité plus petite à une unité
+                  plus grande, l'exposant de conversion sera négatif.
+                  Dans le cas inverse, l'exposant sera positif.
+        \end{enumerate}
+    \end{minipage}
+    \vspace{5pt}
+
+    \textit{Exemples} : \begin{list}{$\bullet$}{}
+        \item $7.38×10^4 μm = ……… m$ : la différence entre les
+              exposants des unités est : $-6-0=-6$.
+
+              d'où : $7.38×10^4μm​=7.38×10^4×10^{-6}m=7.38×10^{-2}m.​$
+
+        \item $9.012×10^{-6} mg =…….. ng$ : la différence entre les exposants des unités est : $-3-(-9)=6$.
+
+              d'où : $9.012×10^{-6}mg​=9.012×10{-6}×10^6ng=9.012×10^0ng=9.012ng.$​
+    \end{list}
+}
+
+\newcommand{\resultatcalcul}{
+    
+    \vspace{5cm}
+
+    \tcbsubtitle{L'écriture du résultat d'un calcul}
+    \minititle{ Retrouver le nombre de chiffres significatifs}
+
+    \hspace{-20pt}
+    \begin{minipage}[t]{0.6\textwidth}
+        % \centering 
+        \minititle{Quand?}
+
+        \begin{list}{$\bullet$}{}
+            \item À la lecture du calcul ayant servi à déterminer une valeur.
+
+                  %   \begin{center}
+                  \vspace{-10pt}
+                  \begin{center}
+                      \textit{Pourquoi?}
+                  \end{center}
+
+                  Prenons un exemple : Un rectangle a précisément 2,33 cm de largeur et à peu près 5 cm de longueur.
+
+                  Soit P son périmètre. $P = 5 × 2 + 2,33 × 2 = 14,66 cm$ en théorie.
+
+                  En revanche, dire qu'il mesure précisément 14,66 cm n'a pas de sens.
+                  Le résultat ne peut être plus précis que les valeurs qui ont permis
+                  le calcul.
+                  %   \end{center}
+                  %   \vspace{-5pt}
+
+
+            \item À la lecture d'une valeur donnée dans un énoncé.
+
+                  %   \vspace{-5pt}
+                  %   \begin{center}
+                  Compter tous les chiffres.
+                  \begin{itemize}
+                      \item un 0 est compté s'il y a au moins un chiffre différent de 0 sur l'une des positions à gauche dans l'écriture du nombre.
+                      \item une puissance de 10 ne compte pas.
+                  \end{itemize}
+                  %   \end{center}
+                  %   \vspace{-5pt}
+
+            \item À la lecture de l'incertitude U(X) associée à la valeur
+
+                  Le résultat aura le même niveau de précision que U(X).
+                  Il ne peut pas être plus précis que l'incertitude.
+
+                  Exemple :
+
+                  À la suite d'un calcul, on trouve une longueur
+                  $$L = 17.562 4 m$$
+                  %   On a aussi 
+                  Sachant que $U(L)= 2 cm = 0.02 m.$
+
+                  Comme U(L) est au centième de mètre,
+                  L arrondie au centième de mètre : $$L= 17.56 ± 0.02 m$$
+        \end{list}
+
+    \end{minipage}
+    \hspace{10pt}
+    \begin{minipage}[t]{0.4\textwidth}
+        \minititle{Comment?}
+        \begin{list}{$\bullet$}{}
+            \item En cas d'addition et de soustraction
+            
+                  Le résultat a le même niveau de précision
+                  que le nombre qui a la décimale la moins précise.
+
+                  Exemple :  
+                  
+                        Avec $d_1= 2.0m$ et $d_2= 16 cm$
+                        
+                        et $$D=d_1+d_2$$
+
+                  On a : $D=d_1+d_2= (2,0 + 0,16) m = 2,2 m.$
+
+                  $d_1$ est au 10e de mètre alors que $d_2$ est au 100e de mètre. Le résultat est donc au 10e de mètre.
+
+            \item En cas de multiplication et de division
+
+                  Le résultat a le même nombre de CS que le terme qui en a le moins.
+
+                  Exemple : avec $$v=\frac{2π R}{t} = \frac{2 π × 5.42}{1.5 × 10^2} =2.3 × 10^{-1} m·s^{-1}$$
+
+                  $2π$ et $10^2$ sont exactes car non issues de mesures : pas de CS
+                  
+                  $5.42$ a 3 CS et $1.5$ a 2 CS → 2 CS au résultat.
+
+                  CS : chiffres significatifs.
+                  \begin{center}
+                      \includegraphics[width=0.3\columnwidth]{CS.png}
+                  \end{center}
+        \end{list}
+    \end{minipage}
+}
+
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\cfoot{\vspace{-55pt} Méthodes ; page 2 sur 2}
+\thispagestyle{plain}
+\pagestyle{fancy}
+% \begin{pagebreakbox}
+\begin{titlebox}{\titre}
+    \ecriturescientifique
+    \conversion
+    \resultatcalcul
+
+    \tcbsubtitle{Résoudre un problème}
+    \begin{list}{$\bullet$}{}
+        \begin{minipage}[c]{0.7\textwidth}
+            \item Partir de la grandeur à trouver
+
+            Avant de décider du chemin à emprunter,
+            il est indispensable de savoir où on doit aller.
+            Dans le cadre d'un exercice de physique,
+            cela signifie en général :
+            identifier la grandeur physique à déterminer.
+            On peut l'indiquer sur la copie dès le début de la rédaction :
+            « Je cherche à déterminer la valeur de {nom de la grandeur physique} en {unité}. »
+        \end{minipage}
+        \hspace{20pt}
+        \begin{minipage}[c]{0.2\textwidth}
+            \begin{center}
+                \includegraphics[width=0.7\columnwidth]{pb.png}
+            \end{center}
+        \end{minipage}
+
+        \item Le chemin de résolution
+
+              Il se construit au brouillon le plus souvent.
+              Partir de la grandeur à déterminer pour remonter
+              jusqu'à une expression littérale ne comportant que
+              des grandeurs connues (données dans le cours ou l'énoncé).
+              \vspace{2pt}
+
+              Indiquer tout d'abord le nom de la grandeur physique à trouver
+              en haut de la feuille. Puis, écrire une relation mathématique
+              connue comportant cette grandeur.
+              \vspace{2pt}
+
+              Il faut ensuite souligner d'une couleur les grandeurs physiques
+              connues et entourer les grandeur d'une autre couleur.
+              Pour chaque grandeur entourée, on cherche une
+              nouvelle relation mathématique. On peut procéder ainsi jusqu'à
+              n'avoir qu'une grandeur inconnue.
+
+              \begin{center}
+                  \includegraphics[width=0.8\columnwidth]{pb2.png}
+              \end{center}
+        \item La rédaction :
+
+              Reprendre le chemin de résolution à l'envers et au propre sur sa copie pour obtenir l'expression littérale et le résultat final.
+
+              \vspace{5pt}
+              \begin{center}
+                  \includegraphics[width=0.6\columnwidth]{p3.png}
+              \end{center}
+              \vspace{-0pt}
+    \end{list}
+
+
+
+
+\end{titlebox}
+% \end{pagebreakbox}
+
+
+\end{document}
+
+
+
+
